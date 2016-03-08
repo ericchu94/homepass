@@ -1,5 +1,9 @@
 # homepass
 
+## dependencies
+* systemd
+* hostapd
+
 ## installation
 * This package is on the AUR (or will be shortly)
 

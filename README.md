@@ -6,19 +6,26 @@
 
 ## installation
 * This package is on the AUR (or will be shortly)
+ 
+### manual installation
+#### arch linux
+```
+$ makepkg -is
+```
 
-### binaries
+#### other linux
+##### binaries
 ```
 # cp homepass /usr/bin/
 ```
 
-### config
+##### config
 ```
 # mkdir -p /etc/homepass
 # cp homepass.conf.example /etc/homepass/homepass.conf
 ```
 
-### systemd
+##### systemd
 ```
 # cp homepass\@.service /etc/systemd/system/
 ```

@@ -4,6 +4,7 @@ pkgver=1
 pkgrel=1
 pkgdesc="A simple homepass service"
 arch=('any')
+url=('https://github.com/ericchu94/homepass')
 license=('GPL')
 depends=('hostapd')
 source=('homepass.conf.example'

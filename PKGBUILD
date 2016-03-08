@@ -11,7 +11,7 @@ source=('homepass.conf.example'
         'homepass'
         'homepass@.service')
 noextract=()
-md5sums=('9d5b889f99d9dfb333c4e6cbbc230405'
+md5sums=('60d54ea79b4ce7bb19975cc3be7947c2'
          'ca0b6232bea881ca2089ef241316d592'
          'c30d5402f39d4b0e2c16d008f23acdc3')
 

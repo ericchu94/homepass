@@ -1,10 +1,14 @@
 interface=wlan0
-bridge=br0
 driver=nl80211
 ssid=NZ@McD1
 hw_mode=g
-channel=6
 auth_algs=1
+
+# Bridge
+bridge=br0
+
+# Channel number
+channel=6
 
 # Uncomment the following to use mac address filtering
 #macaddr_acl=1

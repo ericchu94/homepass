@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+conf=$2
+mac="4E:53:50:4F:4F:$(printf '%X\n' $(expr $(date +%s) / 180 % 160))"
+
+update() {
+    sed -i "s/bssid=.*/bssid=$mac/" $conf
+}
+
+run() {
+    update
+    /usr/bin/hostapd $conf
+}
+
+default() {
+    echo "Wanted MAC: $mac"
+    echo "Actual MAC: $(grep 'bssid' $conf | sed 's/bssid=//')"
+}
+
+
+case "$1" in
+    update)
+        update
+        ;;
+    run)
+        run
+        ;;
+    *)
+        default
+        ;;
+esac

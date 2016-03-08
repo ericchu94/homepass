@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 conf=$2
-mac="4E:53:50:4F:4F:$(printf '%X\n' $(expr $(date +%s) / 180 % 160))"
+mac="4E:53:50:4F:4F:$(printf '%X\n' $(expr $(date -u +%s) / 180 % 160))"
 
 update() {
     sed -i "s/bssid=.*/bssid=$mac/" $conf
@@ -12,9 +12,9 @@ run() {
     /usr/bin/hostapd $conf
 }
 
-default() {
+status() {
     echo "Wanted MAC: $mac"
-    echo "Actual MAC: $(grep 'bssid' $conf | sed 's/bssid=//')"
+    echo "Actual MAC: $(grep 'bssid' "${conf}" 2>&1 | sed 's/bssid=//')"
 }
 
 
@@ -25,7 +25,10 @@ case "$1" in
     run)
         run
         ;;
+    status)
+        status
+        ;;
     *)
-        default
+        echo "Usage: $0 update|run|status CONF"
         ;;
 esac

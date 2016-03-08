@@ -2,17 +2,17 @@
 pkgname=homepass
 pkgver=1
 pkgrel=1
-pkgdesc="A simple homepass service"
+pkgdesc='A simple homepass service'
 arch=('any')
-url=('https://github.com/ericchu94/homepass')
+url='https://github.com/ericchu94/homepass'
 license=('GPL')
 depends=('hostapd')
 source=('homepass.conf.example'
         'homepass'
         'homepass@.service')
 noextract=()
-md5sums=('27c36b67b08316a4487024b57fb39341'
-         'f80fbab8fef303e1a49658bd3488b7f4'
+md5sums=('58d8d6ed72584fcf929e12ed30e78d12'
+         'ca0b6232bea881ca2089ef241316d592'
          'c30d5402f39d4b0e2c16d008f23acdc3')
 
 package() {

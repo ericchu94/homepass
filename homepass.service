@@ -2,8 +2,10 @@
 Description=Rotate homepass
 
 [Service]
-ExecStart=/usr/bin/homepass run /etc/homepass/%i
+ExecStart=/usr/bin/homepass run /etc/homepass/homepass.conf
 ExecReload=/bin/kill -HUP $MAINPID
 WatchdogSec=3 min
 Restart=always
 
+[Install]
+WantedBy=network-online.target

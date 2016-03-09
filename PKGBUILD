@@ -9,11 +9,11 @@ license=('GPL')
 depends=('hostapd')
 source=('homepass.conf.example'
         'homepass'
-        'homepass@.service')
+        'homepass.service')
 noextract=()
 md5sums=('82f8defb0650162c6b8653b4088cd262'
          '8078cb66141afc1868df3a96a1995495'
-         'c30d5402f39d4b0e2c16d008f23acdc3')
+         '8d0e6c7922348565fe1bc5e884d345b1')
 
 package() {
   mkdir -p $pkgdir/etc/homepass/
@@ -23,5 +23,5 @@ package() {
   cp homepass $pkgdir/usr/bin/
 
   mkdir -p $pkgdir/usr/lib/systemd/system/
-  cp homepass@.service $pkgdir/usr/lib/systemd/system/
+  cp homepass.service $pkgdir/usr/lib/systemd/system/
 }

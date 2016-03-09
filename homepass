@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 conf=$2
-mac="4E:53:50:4F:4F:$(printf '%X\n' $(expr $(date -u +%s) / 180 % 160))"
+mac="4E:53:50:4F:4F:$(printf '%02X\n' $(expr $(date -u +%s) / 180 % 160))"
 
 update() {
     sed -i "s/bssid=.*/bssid=$mac/" $conf

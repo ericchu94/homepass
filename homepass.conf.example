@@ -10,11 +10,13 @@ bridge=br0
 # Channel number
 channel=6
 
-# Uncomment the following to use mac address filtering
+# MAC address filtering
 #macaddr_acl=1
 #accept_mac_file=/etc/homepass/accept_mac
 
-# Uncomment the following to create UNIX socket
+# UNIX sockets
 #ctrl_interface=/var/run/hostapd
+# Uncomment the following to specify UNIX socket group
+#ctrl_interface_group=homepass
 
 bssid=4E:53:50:4F:4F:00

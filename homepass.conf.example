@@ -15,7 +15,7 @@ channel=6
 #accept_mac_file=/etc/homepass/accept_mac
 
 # UNIX sockets
-#ctrl_interface=/var/run/hostapd
+#ctrl_interface=/var/run/homepass
 # Uncomment the following to specify UNIX socket group
 #ctrl_interface_group=homepass
 

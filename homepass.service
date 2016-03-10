@@ -8,4 +8,4 @@ WatchdogSec=3 min
 Restart=always
 
 [Install]
-WantedBy=network-online.target
+WantedBy=network.target

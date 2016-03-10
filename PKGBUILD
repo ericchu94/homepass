@@ -13,7 +13,7 @@ source=('homepass.conf.example'
 noextract=()
 md5sums=('82f8defb0650162c6b8653b4088cd262'
          '8078cb66141afc1868df3a96a1995495'
-         '8d0e6c7922348565fe1bc5e884d345b1')
+         '8e33f761ae73630b09274ccec2ee1d3a')
 
 package() {
   mkdir -p $pkgdir/etc/homepass/

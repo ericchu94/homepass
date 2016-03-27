@@ -6,7 +6,7 @@ A systemd homepass homepass implementation
 * hostapd
 
 ## installation
-* This package is on the AUR (or will be shortly)
+* This package is on the [AUR] (https://aur.archlinux.org/packages/shomepass/)
  
 ### manual installation
 #### arch linux

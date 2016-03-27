@@ -1,4 +1,4 @@
-# homepass
+# shomepass
 
 ## dependencies
 * systemd
@@ -16,22 +16,22 @@ $ makepkg -is
 #### other linux
 ##### binaries
 ```
-# cp homepass /usr/bin/
+# cp shomepass /usr/bin/
 ```
 
 ##### config
 ```
-# mkdir -p /etc/homepass
-# cp homepass.conf.example /etc/homepass/homepass.conf
+# mkdir -p /etc/shomepass
+# cp shomepass.conf.example /etc/shomepass/shomepass.conf
 ```
 
 ##### systemd
 ```
-# cp homepass\@.service /etc/systemd/system/
+# cp shomepass.service /etc/systemd/system/
 ```
 
 ## configuration
-Edit `/etc/homepass/homepass.conf`
+Edit `/etc/shomepass/shomepass.conf`
 
 This file is a hostapd configuration file. The fields of interest are the bridge, channel and mac address filtering fields.
 
@@ -65,6 +65,6 @@ Bridge=br0
 
 ## running
 ```
-# systemctl enable homepass@homepass.conf
-# systemctl start homepass@homepass.conf
+# systemctl enable shomepass
+# systemctl start shomepass
 ```

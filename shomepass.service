@@ -1,8 +1,8 @@
 [Unit]
-Description=Rotate homepass
+Description=Systemd homepass
 
 [Service]
-ExecStart=/usr/bin/homepass run /etc/homepass/homepass.conf
+ExecStart=/usr/bin/shomepass run /etc/shomepass/shomepass.conf
 ExecReload=/bin/kill -HUP $MAINPID
 WatchdogSec=3 min
 Restart=always

@@ -12,11 +12,11 @@ channel=6
 
 # MAC address filtering
 #macaddr_acl=1
-#accept_mac_file=/etc/homepass/accept_mac
+#accept_mac_file=/etc/shomepass/accept_mac
 
 # UNIX sockets
-#ctrl_interface=/var/run/homepass
+#ctrl_interface=/var/run/shomepass
 # Uncomment the following to specify UNIX socket group
-#ctrl_interface_group=homepass
+#ctrl_interface_group=shomepass
 
 bssid=4E:53:50:4F:4F:00

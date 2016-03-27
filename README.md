@@ -1,4 +1,5 @@
 # shomepass
+A systemd homepass homepass implementation
 
 ## dependencies
 * systemd

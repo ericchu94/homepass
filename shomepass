@@ -4,12 +4,18 @@ conf=$2
 mac="4E:53:50:4F:4F:$(printf '%02X\n' $(expr $(date -u +%s) / 180 % 160))"
 
 update() {
+    echo 'Updating MAC address'
     sed -i "s/bssid=.*/bssid=$mac/" $conf
 }
 
 run() {
-    update
-    /usr/bin/hostapd $conf
+    while true; do
+        update
+        /usr/bin/hostapd $conf &
+        PID=$!
+        sleep 180
+        kill -HUP $PID
+    done
 }
 
 status() {

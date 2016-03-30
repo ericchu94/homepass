@@ -4,8 +4,6 @@ Description=Systemd homepass
 [Service]
 ExecStart=/usr/bin/shomepass run /etc/shomepass/shomepass.conf
 ExecReload=/bin/kill -HUP $MAINPID
-WatchdogSec=3 min
-Restart=always
 
 [Install]
 WantedBy=network.target

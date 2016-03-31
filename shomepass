@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 
 conf=$2
-mac="4E:53:50:4F:4F:$(printf '%02X\n' $(expr $(date -u +%s) / 180 % 160))"
+
+mac() {
+    echo "4E:53:50:4F:4F:$(printf '%02X\n' $(expr $(date -u +%s) / 180 % 160))"
+}
 
 update() {
     echo 'Updating MAC address'
-    sed -i "s/bssid=.*/bssid=$mac/" $conf
+    sed -i "s/bssid=.*/bssid=$(mac)/" $conf
 }
 
 run() {
@@ -19,7 +22,7 @@ run() {
 }
 
 status() {
-    echo "Wanted MAC: $mac"
+    echo "Wanted MAC: $(mac)"
     echo "Actual MAC: $(grep 'bssid' "${conf}" 2>&1 | sed 's/bssid=//')"
 }
 

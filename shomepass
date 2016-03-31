@@ -14,7 +14,7 @@ run() {
         /usr/bin/hostapd $conf &
         PID=$!
         sleep 180
-        kill -HUP $PID
+        kill -KILL $PID
     done
 }
 

@@ -1,6 +1,6 @@
 interface=wlan0
 driver=nl80211
-ssid=NZ@McD1
+ssid=attwifi
 hw_mode=g
 auth_algs=1
 
